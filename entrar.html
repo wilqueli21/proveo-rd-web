@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iniciar sesión · Proveo RD y Proveo Finanzas</title>
+<meta name="description" content="Entra a Proveo RD o a Proveo Finanzas. Cada sistema tiene su propio acceso.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0F1E35">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="perfil.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+  <div class="contenedor barra">
+    <a class="logo" href="index.html" aria-label="Proveo RD, inicio">
+      <svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true"><text x="45" y="66" text-anchor="middle" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-weight="800" font-size="78" fill="currentColor" letter-spacing="-3">p</text><circle cx="76" cy="62" r="7" fill="#C9A55C"/></svg>
+      <span>proveo<span class="rd">RD</span></span>
+    </a>
+    <nav aria-label="Secciones">
+      <ul>
+        <li><a href="index.html">Proveo RD</a></li>
+        <li><a href="finanzas.html">Proveo Finanzas</a></li>
+        <li><a href="index.html#demostracion">Demostración</a></li>
+      </ul>
+    </nav>
+    <a class="boton secundario chico" href="index.html">Volver al inicio</a>
+  </div>
+</header>
+
+<main>
+  <section class="acceso">
+    <div class="contenedor">
+      <div class="cabecera" style="text-align:center;margin:0 auto 36px">
+        <span class="etiqueta"><span class="punto"></span> Acceso para clientes</span>
+        <h1 style="font-size:clamp(1.8rem,4vw,2.6rem)">Iniciar sesión</h1>
+        <p class="suave">Cada sistema tiene su propio acceso. Elige el tuyo.</p>
+      </div>
+
+      <div class="acceso-rejilla">
+        <!-- Para cambiar el destino de cada botón, edita solo el href de los enlaces con id "entrar-proveo" y "entrar-finanzas". -->
+        <article class="tarjeta acceso-tarjeta">
+          <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div>
+          <h2>Proveo RD</h2>
+          <p class="suave">Licitaciones: procesos de tu rubro, oferta económica, expedientes y cumplimiento con la Ley 47-25.</p>
+          <a id="entrar-proveo" class="boton primario" href="http://localhost:5173/" rel="noopener">Iniciar sesión en Proveo RD</a>
+          <p class="suave pie-acceso">Hoy Proveo RD se usa instalado: en la computadora donde está, ábrelo con el acceso directo «Proveo» del escritorio. El acceso desde internet está en preparación.</p>
+          <a class="enlace-suave" href="mailto:wilqueli00@gmail.com?subject=Acceso%20a%20Proveo%20RD">¿Aún no tienes acceso? Pídelo aquí.</a>
+        </article>
+
+        <article class="tarjeta acceso-tarjeta">
+          <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div>
+          <h2>Proveo Finanzas</h2>
+          <p class="suave">Gestión y facturación: facturas y cotizaciones, inventario, cartera y punto de venta.</p>
+          <a id="entrar-finanzas" class="boton primario" href="http://127.0.0.1:8787/" rel="noopener">Iniciar sesión en Proveo Finanzas</a>
+          <p class="suave pie-acceso">Hoy Proveo Finanzas se usa instalado: el botón abre el sistema en la computadora donde está (o usa el acceso directo «Proveo Finanzas»). El acceso desde internet está en preparación.</p>
+          <a class="enlace-suave" href="mailto:wilqueli00@gmail.com?subject=Acceso%20a%20Proveo%20Finanzas">¿Aún no tienes acceso? Pídelo aquí.</a>
+        </article>
+      </div>
+
+      <p class="suave" style="text-align:center;margin-top:32px">¿Todavía no eres cliente? <a href="index.html#demostracion">Pide una demostración</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="contenedor">
+    <div class="enlaces">
+      <a href="index.html">Proveo RD</a>
+      <a href="finanzas.html">Proveo Finanzas</a>
+      <a href="https://hub-redes.licita-nexo.workers.dev/privacidad" rel="noopener">Política de privacidad</a>
+      <a href="https://hub-redes.licita-nexo.workers.dev/eliminar-datos" rel="noopener">Eliminar mis datos</a>
+    </div>
+    <p style="margin:0">© 2026 Proveo RD · Proveo Finanzas | Desarrollados por INCAVI, SRL, en la República Dominicana. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>

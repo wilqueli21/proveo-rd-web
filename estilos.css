@@ -150,6 +150,21 @@ section{padding:72px 0}
 .demo .caja li{display:flex;gap:10px}
 .demo .caja li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--oro);margin-top:9px}
 
+/* Encabezado: botones de acceso */
+.barra .botones{display:flex;gap:8px;align-items:center;flex:none}
+@media (max-width:480px){.barra .botones .demo-cab{display:none}}
+
+/* Iniciar sesión */
+.acceso{padding:64px 0 72px}
+.acceso-rejilla{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:900px;margin:0 auto}
+@media (max-width:760px){.acceso-rejilla{grid-template-columns:1fr}}
+.acceso-tarjeta{display:flex;flex-direction:column;gap:8px;padding:30px}
+.acceso-tarjeta h2{font-size:1.4rem;margin:0}
+.acceso-tarjeta .boton{margin-top:8px;align-self:flex-start}
+.acceso-tarjeta .pie-acceso{font-size:.85rem;margin:6px 0 0}
+.acceso-tarjeta .enlace-suave{font-size:.9rem;font-weight:700;color:var(--oro-texto);text-decoration:none;margin-top:auto}
+.acceso-tarjeta .enlace-suave:hover{text-decoration:underline}
+
 /* Pie */
 footer{padding:36px 0;font-size:.9rem;color:var(--suave)}
 footer .contenedor{display:grid;gap:14px}

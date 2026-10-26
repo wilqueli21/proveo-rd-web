@@ -13,4 +13,9 @@ pensada para enlazarla desde el perfil de Instagram y las demás redes.
   garantías inventados. Los enlaces de privacidad y de borrado de datos apuntan al centro de mensajes en Cloudflare.
 - `perfil.png` es la misma foto de perfil de Instagram; sirve de imagen para compartir el enlace y de ícono en el celular.
 
+`entrar.html` es la página «Iniciar sesión», con una tarjeta por sistema. Los destinos de los botones están en los enlaces
+con id `entrar-proveo` y `entrar-finanzas`; hoy apuntan a las direcciones locales de los sistemas instalados en la PC
+(Proveo RD en `http://localhost:5173/`, la `FRONTEND_BASE_URL` de su API; Proveo Finanzas en `http://127.0.0.1:8787/`).
+Cuando existan las direcciones en la nube (Proveo Finanzas: `docs/despliegue-cloudflare.md` de nexo-rd), se cambian ahí.
+
 Para cambiar algo: edita `index.html`, haz commit y push a `main`; GitHub Pages lo publica en uno o dos minutos.
