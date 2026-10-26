@@ -15,130 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --marino:#0F1E35;--marino-2:#182B4A;--oro:#C9A55C;--oro-texto:#A07C34;
-  --fondo:#F6F7F9;--papel:#FFFFFF;--tinta:#1D2733;--suave:#56606B;--linea:#DDE2E8;
-  --sombra:0 10px 30px rgba(15,30,53,.08);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --fondo:#0B1424;--papel:#132038;--tinta:#E8EDF2;--suave:#A5B0BB;--linea:#243550;--oro-texto:#D9BC7A;
-    --sombra:0 10px 30px rgba(0,0,0,.35);
-  }
-}
-:root[data-theme="dark"]{
-  --fondo:#0B1424;--papel:#132038;--tinta:#E8EDF2;--suave:#A5B0BB;--linea:#243550;--oro-texto:#D9BC7A;
-  --sombra:0 10px 30px rgba(0,0,0,.35);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--fondo);color:var(--tinta);font:16px/1.6 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-a{color:inherit}
-img,svg{display:block;max-width:100%}
-.contenedor{max-width:1080px;margin:0 auto;padding:0 16px}
-h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.02em}
-h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:800}
-h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800}
-h3{font-size:1.1rem;font-weight:700}
-p{margin:0 0 1em}
-.suave{color:var(--suave)}
-.oro{color:var(--oro-texto)}
-
-/* Barra superior */
-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--fondo) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
-.barra{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
-.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:1.35rem;letter-spacing:-.03em}
-.logo .rd{font-size:.8em;letter-spacing:.04em;color:var(--oro-texto);margin-left:.1em}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
-nav a{text-decoration:none;font-weight:700;font-size:.95rem;color:var(--suave)}
-nav a:hover{color:var(--tinta)}
-@media (max-width:720px){nav{display:none}}
-
-/* Botones */
-.boton{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none;border:2px solid transparent;transition:transform .15s,box-shadow .15s}
-.boton:hover{transform:translateY(-1px)}
-.boton.primario{background:var(--marino);color:#fff;box-shadow:var(--sombra)}
-:root[data-theme="dark"] .boton.primario{background:var(--oro);color:#14110A}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .boton.primario{background:var(--oro);color:#14110A}}
-.boton.secundario{border-color:var(--linea);color:var(--tinta);background:var(--papel)}
-.boton:focus-visible,a:focus-visible{outline:3px solid var(--oro);outline-offset:3px}
-
-/* Portada */
-.portada{padding:72px 0 56px}
-.portada .contenedor{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
-@media (max-width:860px){.portada .contenedor{grid-template-columns:1fr}.portada{padding:48px 0 40px}}
-.etiqueta{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--papel);border:1px solid var(--linea);font-size:.85rem;font-weight:700;color:var(--suave);margin-bottom:18px}
-.etiqueta .punto{width:8px;height:8px;border-radius:50%;background:var(--oro)}
-.portada p.grande{font-size:1.15rem;max-width:56ch}
-.acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.tarjeta-marca{background:var(--marino);color:#fff;border-radius:20px;padding:36px;box-shadow:var(--sombra);position:relative;overflow:hidden}
-.tarjeta-marca::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:var(--oro);opacity:.18}
-.tarjeta-marca .p{font-size:7rem;font-weight:800;line-height:1;letter-spacing:-.06em;position:relative;display:inline-block}
-.tarjeta-marca .p i{position:absolute;right:-.28em;bottom:.12em;width:.22em;height:.22em;border-radius:50%;background:var(--oro)}
-.tarjeta-marca .nombre{font-size:2rem;font-weight:800;letter-spacing:-.03em;margin-top:14px}
-.tarjeta-marca .nombre span{color:var(--oro);font-size:.8em;letter-spacing:.04em;margin-left:.2em}
-.tarjeta-marca ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px;font-size:.95rem}
-.tarjeta-marca li{display:flex;gap:10px;align-items:flex-start}
-.tarjeta-marca li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--oro);margin-top:9px}
-
-/* Franja de confianza */
-.franja{border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);background:var(--papel)}
-.franja .contenedor{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:18px 16px}
-@media (max-width:720px){.franja .contenedor{grid-template-columns:1fr}}
-.franja div{display:flex;gap:10px;align-items:center;font-weight:700;font-size:.92rem}
-.franja svg{flex:none;width:22px;height:22px;stroke:var(--oro-texto);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-
-/* Secciones */
-section{padding:72px 0}
-@media (max-width:860px){section{padding:52px 0}}
-.cabecera{max-width:62ch;margin-bottom:36px}
-.rejilla{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media (max-width:900px){.rejilla{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:600px){.rejilla{grid-template-columns:1fr}}
-.tarjeta{background:var(--papel);border:1px solid var(--linea);border-radius:16px;padding:24px;box-shadow:var(--sombra)}
-.tarjeta .icono{width:44px;height:44px;border-radius:12px;background:var(--marino);display:grid;place-items:center;margin-bottom:16px}
-.tarjeta .icono svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.tarjeta p{margin:0;color:var(--suave);font-size:.95rem}
-
-/* Proveo Finanzas */
-.finanzas{background:var(--papel);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
-.finanzas .contenedor{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-@media (max-width:860px){.finanzas .contenedor{grid-template-columns:1fr}}
-.lista{list-style:none;padding:0;margin:0;display:grid;gap:12px}
-.lista li{display:flex;gap:12px;align-items:flex-start}
-.lista li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--oro);margin-top:8px}
-.nota{background:var(--fondo);border:1px solid var(--linea);border-radius:16px;padding:24px}
-.nota strong{display:block;margin-bottom:6px}
-
-/* Pasos */
-.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:paso}
-@media (max-width:900px){.pasos{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.pasos{grid-template-columns:1fr}}
-.paso{background:var(--papel);border:1px solid var(--linea);border-radius:16px;padding:24px;position:relative}
-.paso::before{counter-increment:paso;content:counter(paso);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--oro);color:#14110A;font-weight:800;margin-bottom:14px}
-.paso p{margin:0;color:var(--suave);font-size:.95rem}
-
-/* Demostración */
-.demo{background:var(--marino);color:#fff}
-.demo .contenedor{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-@media (max-width:860px){.demo .contenedor{grid-template-columns:1fr}}
-.demo h2{color:#fff}
-.demo p{color:#C9D2DE}
-.demo .boton.primario{background:var(--oro);color:#14110A}
-.demo .boton.secundario{background:transparent;border-color:#3A4C6A;color:#fff}
-.demo .caja{background:var(--marino-2);border:1px solid #2A3D5C;border-radius:16px;padding:24px}
-.demo .caja ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.95rem}
-.demo .caja li{display:flex;gap:10px}
-.demo .caja li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--oro);margin-top:9px}
-
-/* Pie */
-footer{padding:36px 0;font-size:.9rem;color:var(--suave)}
-footer .contenedor{display:grid;gap:14px}
-footer .enlaces{display:flex;flex-wrap:wrap;gap:16px}
-footer a{text-decoration:none;font-weight:700}
-footer a:hover{text-decoration:underline}
-</style>
+<link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
@@ -151,12 +28,12 @@ footer a:hover{text-decoration:underline}
     <nav aria-label="Secciones">
       <ul>
         <li><a href="#que-hace">Qué hace</a></li>
-        <li><a href="#finanzas">Proveo Finanzas</a></li>
+        <li><a href="finanzas.html">Proveo Finanzas</a></li>
         <li><a href="#como-funciona">Cómo funciona</a></li>
         <li><a href="#demostracion">Demostración</a></li>
       </ul>
     </nav>
-    <a class="boton primario" href="#demostracion" style="padding:10px 16px;font-size:.92rem">Pide tu demostración</a>
+    <a class="boton primario chico" href="#demostracion">Pide tu demostración</a>
   </div>
 </header>
 
@@ -235,22 +112,29 @@ footer a:hover{text-decoration:underline}
     </div>
   </section>
 
-  <section id="finanzas" class="finanzas">
+  <section id="finanzas" class="doble">
     <div class="contenedor">
       <div>
         <span class="etiqueta"><span class="punto"></span> Para pymes</span>
-        <h2>Proveo Finanzas: facturación para tu empresa</h2>
-        <p class="suave">El sistema de facturación que acompaña a Proveo RD. Lleva el día a día del negocio y recibe, con el mismo número, las facturas de cada oferta adjudicada.</p>
+        <h2>Proveo Finanzas: factura, cobra y controla tu negocio</h2>
+        <p class="suave">El sistema de gestión y facturación que acompaña a Proveo RD. Lleva el día a día de tu empresa en un solo lugar, con tu equipo y cada quien con su rol.</p>
         <ul class="lista">
-          <li>Facturas y cotizaciones, con el RNC del padrón de la DGII.</li>
-          <li>Cuentas por cobrar y por pagar, con seguimiento de cobros.</li>
-          <li>Inventario por almacén, clientes, proveedores y catálogo.</li>
-          <li>Punto de venta y cuadre de caja.</li>
+          <li><span><strong>Facturas y cotizaciones</strong> con descuentos por línea y el ITBIS calculado por tasa (18 %, 16 % o exento), que siempre cuadra.</span></li>
+          <li><span><strong>Clientes, proveedores y catálogo</strong>: escribes el RNC y se llena la razón social desde el padrón de la DGII.</span></li>
+          <li><span><strong>Inventario por almacén</strong> con entradas, salidas, conteos y traslados; la venta descuenta sola y la compra suma.</span></li>
+          <li><span><strong>Cuentas por cobrar y por pagar</strong>: facturas vencidas, pagos parciales y estado de cuenta para imprimir.</span></li>
+          <li><span><strong>Punto de venta</strong> para el mostrador: efectivo, tarjeta, transferencia o combinado, devuelta y cuadre de caja por turno.</span></li>
+          <li><span><strong>Equipo y varias empresas</strong>, con roles de Administrador, Ventas, Inventario, Finanzas, Cajero y Consulta, y auditoría de lo importante.</span></li>
         </ul>
+        <div class="acciones">
+          <a class="boton primario flecha" href="finanzas.html">Conoce Proveo Finanzas</a>
+        </div>
       </div>
       <div class="nota">
         <strong>Conectados entre sí</strong>
-        <p class="suave" style="margin:0">Cuando te adjudican un proceso en Proveo RD, las facturas de esa oferta se emiten en Proveo Finanzas y quedan registradas en los dos sistemas con el mismo número. Varias empresas, varios roles, un solo acceso.</p>
+        <p class="suave">Cuando te adjudican un proceso en Proveo RD, las facturas de esa oferta se emiten en Proveo Finanzas y quedan registradas en los dos sistemas con el mismo número. Tu catálogo, tu logo y tus datos de emisor viajan con ellas.</p>
+        <strong>Factura electrónica (e-CF)</strong>
+        <p class="suave">En preparación: el módulo fiscal sigue los esquemas oficiales de la DGII y la emisión real irá por un proveedor certificado. Pregúntanos cómo va.</p>
       </div>
     </div>
   </section>
@@ -296,6 +180,7 @@ footer a:hover{text-decoration:underline}
 <footer>
   <div class="contenedor">
     <div class="enlaces">
+      <a href="finanzas.html">Proveo Finanzas</a>
       <a href="https://hub-redes.licita-nexo.workers.dev/privacidad" rel="noopener">Política de privacidad</a>
       <a href="https://hub-redes.licita-nexo.workers.dev/eliminar-datos" rel="noopener">Eliminar mis datos</a>
       <a href="mailto:wilqueli00@gmail.com">wilqueli00@gmail.com</a>
